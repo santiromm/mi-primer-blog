@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Blog de Santiago Romero</title>
+    <style>
+        .filtro-usuarios {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+        .usuario-filtro {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            background: #e0e0e0;
+            border-radius: 3px;
+        }
+        .usuario-filtro.activo {
+            background: #4CAF50;
+            color: white;
+        }
+        .limpiar-filtro {
+            display: inline-block;
+            margin-left: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div style="background: red;">
+        <h1><a href="/">Blog del profe Jorge</a></h1>
+    </div>
+
+    {% for publicacion in publicaciones %}
+    <div>
+        <p> publicado: {{ publicacion.fecha_publicacion }}</p>
+        <h2><a href="">{{ publicacion.titulo }}</a></h2>
+        <p>{{ publicacion.texto|linebreaksbr }}</p>
+        <hr>
+    </div>
+    {% endfor %}
+</body>
+</html>
