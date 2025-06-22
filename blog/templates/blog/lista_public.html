@@ -4,19 +4,28 @@
         <title>Blog de Santiago Romero</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div>
+        <div class="page-header">
             <h1><a href="/">Blog de Santiago Romero</a></h1>
         </div>
-        {% for publicacion in publicaciones %}
-        <div>
-            <p> publicado: {{ publicacion.fecha_publicacion }}</p>
-            <h2><a href="">{{ publicacion.titulo }}</a></h2>
-            <p>{{ publicacion.texto|linebreaksbr }}</p>
-            <hr>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for publicacion in publicaciones %}
+                        <div class="post">
+                            <div class="date">
+                            <p> publicado: {{ publicacion.fecha_publicacion }}</p>
+                            </div>
+                        <h2><a href="">{{ publicacion.titulo }}</a></h2>
+                        <p>{{ publicacion.texto|linebreaksbr }}</p>
+                        <hr>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-        {% endfor %}
+    </div>
     </body>
 </html>
