@@ -4,7 +4,7 @@ margin-top: 0;
 padding: 20px 20px 20px 40px;
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-color: #ffffff;
+color: #0b0233;
 font-size: 36pt;
 text-decoration: none;
 }
@@ -24,7 +24,7 @@ float: right;
 width: 100%;
 }
 .top-menu, .top-menu:hover, .top-menu:visited {
-color: #ffffff;
+color: #170b2c;
 float: right;
 font-size: 26pt;
 margin-right: 20px;
