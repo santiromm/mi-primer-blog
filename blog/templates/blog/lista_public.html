@@ -9,13 +9,14 @@
     </head>
     <body>
         <div class="page-header">
-            <h1><a href="/">Blog de Santiago Romero</a></h1>
+            <h1><a href="/">Estadios más lindos del futbol argentino</a></h1>
         </div>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
                     {% for publicacion in publicaciones %}
                         <div class="post">
+                            <img src="{{ publicacion.img }}" alt="{{ publicacion.titulo }}" style="max-height: 190px; float: left; margin-right: 20px; border-radius:5px;">
                             <div class="date">
                             <p> publicado: {{ publicacion.fecha_publicacion }}</p>
                             </div>

@@ -8,6 +8,7 @@ class Publicacion(models.Model):
     texto = models.TextField()
     fecha_creacion = models.DateTimeField(default=timezone.now)
     fecha_publicacion = models.DateTimeField(blank=True, null=True)
+    img = models.URLField(blank=True, null=True)
     
     def publicar(self):
         self.fecha_publicacion = timezone.now()
